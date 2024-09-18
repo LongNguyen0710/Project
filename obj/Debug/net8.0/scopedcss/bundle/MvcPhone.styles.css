@@ -1,0 +1,469 @@
+/* _content/MvcPhone/Views/Logins/Index.cshtml.rz.scp.css */
+
+*[b-spon1n8tdo]{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body[b-spon1n8tdo]{
+    background-color: #c9d6ff;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100px;
+}
+
+.container[b-spon1n8tdo]{
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+.container p[b-spon1n8tdo]{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+.container span[b-spon1n8tdo]{
+    font-size: 12px;
+}
+
+.container a[b-spon1n8tdo]{
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+.container button[b-spon1n8tdo]{
+    background-color: #512da8;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.container button.hidden[b-spon1n8tdo]{
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.container form[b-spon1n8tdo]{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.container input[b-spon1n8tdo]{
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.form-container[b-spon1n8tdo]{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in[b-spon1n8tdo]{
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.container.active .sign-in[b-spon1n8tdo]{
+    transform: translateX(100%);
+}
+
+.sign-up[b-spon1n8tdo]{
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.container.active .sign-up[b-spon1n8tdo]{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move-b-spon1n8tdo 0.6s;
+}
+
+@keyframes move-b-spon1n8tdo{
+    0%, 49.99%{
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100%{
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.social-icons[b-spon1n8tdo]{
+    margin: 20px 0;
+}
+
+.social-icons a[b-spon1n8tdo]{
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+}
+
+.toggle-container[b-spon1n8tdo]{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+.container.active .toggle-container[b-spon1n8tdo]{
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.toggle[b-spon1n8tdo]{
+    background-color: #512da8;
+    height: 100%;
+    background: linear-gradient(to right, #5c6bc0, #512da8);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.container.active .toggle[b-spon1n8tdo]{
+    transform: translateX(50%);
+}
+
+.toggle-panel[b-spon1n8tdo]{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-left[b-spon1n8tdo]{
+    transform: translateX(-200%);
+}
+
+.container.active .toggle-left[b-spon1n8tdo]{
+    transform: translateX(0);
+}
+
+.toggle-right[b-spon1n8tdo]{
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.active .toggle-right[b-spon1n8tdo]{
+    transform: translateX(200%);
+}
+/* _content/MvcPhone/Views/Logins/SignUp.cshtml.rz.scp.css */
+
+*[b-ttbslun4kk]{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body[b-ttbslun4kk]{
+    background-color: #c9d6ff;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100px;
+}
+
+.container[b-ttbslun4kk]{
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+.container p[b-ttbslun4kk]{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+.container span[b-ttbslun4kk]{
+    font-size: 12px;
+}
+
+.container a[b-ttbslun4kk]{
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+.container button[b-ttbslun4kk]{
+    background-color: #512da8;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.container button.hidden[b-ttbslun4kk]{
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.container form[b-ttbslun4kk]{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.container input[b-ttbslun4kk]{
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.form-container[b-ttbslun4kk]{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in[b-ttbslun4kk]{
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.container.active .sign-in[b-ttbslun4kk]{
+    transform: translateX(100%);
+}
+
+.sign-up[b-ttbslun4kk]{
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.container.active .sign-up[b-ttbslun4kk]{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move-b-ttbslun4kk 0.6s;
+}
+
+@keyframes move-b-ttbslun4kk{
+    0%, 49.99%{
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100%{
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.social-icons[b-ttbslun4kk]{
+    margin: 20px 0;
+}
+
+.social-icons a[b-ttbslun4kk]{
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+}
+
+.toggle-container[b-ttbslun4kk]{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+.container.active .toggle-container[b-ttbslun4kk]{
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.toggle[b-ttbslun4kk]{
+    background-color: #512da8;
+    height: 100%;
+    background: linear-gradient(to right, #5c6bc0, #512da8);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.container.active .toggle[b-ttbslun4kk]{
+    transform: translateX(50%);
+}
+
+.toggle-panel[b-ttbslun4kk]{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-left[b-ttbslun4kk]{
+    transform: translateX(-200%);
+}
+
+.container.active .toggle-left[b-ttbslun4kk]{
+    transform: translateX(0);
+}
+
+.toggle-right[b-ttbslun4kk]{
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.active .toggle-right[b-ttbslun4kk]{
+    transform: translateX(200%);
+}
+/* _content/MvcPhone/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-bomc2t7fyq] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-bomc2t7fyq] {
+  color: #0077cc;
+}
+
+.btn-primary[b-bomc2t7fyq] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-bomc2t7fyq], .nav-pills .show > .nav-link[b-bomc2t7fyq] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-bomc2t7fyq] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-bomc2t7fyq] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-bomc2t7fyq] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-bomc2t7fyq] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-bomc2t7fyq] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

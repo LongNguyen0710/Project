@@ -1,0 +1,72 @@
+@model MvcPhone.Models.Bill
+
+@{
+    ViewData["Title"] = "Create";
+    var ProductJS = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Product);
+}
+
+<h1>Create</h1>
+
+<h4>Bill</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group">
+                <label asp-for="ProductId" class="control-label"></label>
+                <input hidden type="number" asp-for = "ProductId" readonly class="form-control" />
+                <input name="" value="@Model.Product.Name" disabled class="form-control" />
+                <span asp-validation-for="ProductId" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="DateTime" class="control-label"></label>
+                <input asp-for="DateTime" class="form-control" />
+                <span asp-validation-for="DateTime" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="Amount" class="control-label"></label>
+                <input asp-for="Amount" class="form-control" id="amount" type= "number"/>
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+            
+            @* <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" id="price" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div> *@
+            
+            <!-- Trường hiển thị tổng tiền -->
+            <div class="form-group">
+                <label for="total">Total Bill</label>
+                <input name = "Price" type="text" id="total" class="form-control"  />
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
+    <script>
+        var Product = @Html.Raw(ProductJS);
+        console.log(Product);
+        document.getElementById('amount').addEventListener('input', function() {
+            var amount = parseFloat(this.value) || 0;
+            var price = parseFloat(this.value) || 0;
+            var total = amount * Product.Price;
+            document.getElementById('total').value = total.toFixed(2); // Cập nhật giá trị tổng tiền
+        });
+    </script>
+}

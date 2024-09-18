@@ -1,0 +1,68 @@
+@model MvcPhone.Models.ProductEditView
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="@Model.Product.Name" class="control-label"></label>
+                <input asp-for="@Model.Product.Name" class="form-control" />
+                <span asp-validation-for="@Model.Product.Name" class="text-danger"></span>
+                @Html.ValidationMessage("Name", new { style = "color:#f00" })
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Product.ReleaseDate" class="control-label"></label>
+                <input asp-for="@Model.Product.ReleaseDate" class="form-control" />
+                <span asp-validation-for="@Model.Product.ReleaseDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Product.Genre" class="control-label"></label>
+                <input asp-for="@Model.Product.Genre" class="form-control" />
+                <span asp-validation-for="@Model.Product.Genre" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="@Model.Genres" class="control-label"></label>
+                <br>
+                <select id="Genres" name = "Product.CategoryId" class="form-control">
+                    <option value="">Select</option>
+                    @foreach(var item in Model.Genres) {
+                        <option value="@item.Id">@item.Name</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Product.Price" class="control-label"></label>
+                <input asp-for="@Model.Product.Price" class="form-control" />
+                <span asp-validation-for="@Model.Product.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Product.Amount" class="control-label"></label>
+                <input asp-for="@Model.Product.Amount" class="form-control" />
+                <span asp-validation-for="@Model.Product.Amount" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<link rel="stylesheet" href="">
+
+<div class="text-center">
+    
+    @if (User.Identity.Name != null)
+{
+    <h1 class="display-4">Welcome <a class="nav-link-1 text-dark me-2 text-decoration-none" asp-area="">@User.Identity.Name</a></h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    
+}  
+    else{
+        <div><button><a href="/logins">Login</a></button></div>        
+    } 
+</div>
+<body>
+    
+</body>
